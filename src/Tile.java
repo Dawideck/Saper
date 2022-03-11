@@ -1,50 +1,57 @@
 public class Tile {
 
+    public int x, y;
     private boolean isBombed;
     private boolean isRevealed;
     private boolean isFlagged;
-    private int bombCountAround;
+    public int bombCountAround;
 
+    public Tile(int dimX, int dimY){
+        this.x = dimX;
+        this.y = dimY;
 
-
-    public String getBoardStatus(){
-        if(getBomb())
-            {return "B";}
-        else
-            if(getFlag())
-                {return "F";}
-            else
-                if(getReveal())
-                {return "o";}
-                else return "X";
     }
 
-    public int getBombCountAround(){
-        return bombCountAround;
+
+    public String getBoardStatus() {
+        if (getBomb()) {
+            return "B";
+        } else if (getFlag()) {
+            return "F";
+        } else if (getReveal()) {
+            return "o";
+        } else return "X";
     }
 
-    public boolean getBomb(){
+    public void updateGameBoard() {
+        if (getBomb()) {
+            System.out.println("KABOOM!");
+        }else{
+
+        }
+    }
+
+    public boolean getBomb() {
         return isBombed;
     }
 
-    public boolean getReveal(){
+    public boolean getReveal() {
         return isRevealed;
     }
 
-    public boolean getFlag(){
+    public boolean getFlag() {
         return isFlagged;
     }
 
-    public void setBombed(){
+    public void setBombed() {
         isBombed = true;
     }
 
-    public void setRevealed(){
+    public void setRevealed() { //rozbudować o odsłanianie połaci pól
         isRevealed = true;
     }
 
-    public void setFlagged(){
+    public void setFlagged() {
         isFlagged = true;
     }
-
 }
