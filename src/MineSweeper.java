@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class MineSweeper {
 
-    //for now this method prints the amount of bombs around given tile --> will print an updated board
+    //print an updated board
     public static void printUpdatedBoard(Tile[][] tile, int dimX, int dimY) {
         for (int i = 0; i < dimX; i++) {
             for (int j = 0; j < dimY; j++) {
