@@ -1,6 +1,5 @@
 public class Tile {
 
-    //public int x, y;
     private boolean isBombed;
     private boolean isRevealed;
     private boolean isFlagged;
@@ -8,24 +7,6 @@ public class Tile {
     private boolean isChecked;
 
 
-    public String getBoardStatus() {
-        if (getBomb()) {
-            return "*";
-        } else if (getFlag()) {
-            return "F";
-        } else if (getReveal()) {
-            return "o";
-        } else return "X";
-    }
-/*
-    public void updateGameBoard() {
-        if (getBomb()) {
-            System.out.println("KABOOM!");
-        } else {
-            //go go go!
-        }
-    }
-*/
 
     //getters
     public boolean getBomb() {
